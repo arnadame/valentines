@@ -51,10 +51,10 @@
     count++
     if(count >= 10){
       no.classList.add('absolute')
-      const randomX = Math.floor(Math.random() * 15);
-      const randomY = Math.floor(Math.random() * 50);
-      no.style.right = randomX + 'rem'
-      no.style.top = randomY + 'rem'
+      const randomX = Math.floor(Math.random() * 70);
+      const randomY = Math.floor(Math.random() * 90);
+      no.style.right = randomX + '%'
+      no.style.top = randomY + '%'
     }
   })
 
