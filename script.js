@@ -7,31 +7,31 @@
   var arr = [
     {
       text:'Please?', 
-      img:'/img/capoo1.webp'
+      img:'img/capoo1.webp'
     },
     {
       text:'Really?',
-      img:'/img/redhorse.gif'
+      img:'img/redhorse.gif'
     },
     {
       text:'Is this how it’s going to be?',
-      img:'/img/sad2.gif'
+      img:'img/sad2.gif'
     },
     {
       text:'Not like this...',
-      img:'/img/sad2.webp'
+      img:'img/sad2.webp'
     },
     {
       text:'So this is it then?',
-      img:'/img/pikachu.webp'
+      img:'img/pikachu.webp'
     },
     {
       text:'Wow, that hurts...',
-      img:'/img/sad1.gif'
+      img:'img/sad1.gif'
     },
     {
       text:'I wasn’t enough, huh?',
-      img:'/img/sad1.webp'
+      img:'img/sad1.webp'
     },
   ]
 
