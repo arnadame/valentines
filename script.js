@@ -1,19 +1,40 @@
 
   var no = document.querySelector('#no')
   var yes = document.querySelector('#yes')
+  var catImg = document.querySelector('#capooImg')
   let count=0
-  var noAns = [
-    'Please?', 
-    'Really?', 
-    'Seriously?', 
-    'Is this how it’s going to be?', 
-    'I guess I didn’t matter...', 
-    'I thought you cared...', 
-    'Not like this...', 
-    'So this is it then?', 
-    'Wow, that hurts...', 
-    'I wasn’t enough, huh?'
-  ];
+
+  var arr = [
+    {
+      text:'Please?', 
+      img:'/img/capoo1.webp'
+    },
+    {
+      text:'Really?',
+      img:'/img/redhorse.gif'
+    },
+    {
+      text:'Is this how it’s going to be?',
+      img:'/img/sad2.gif'
+    },
+    {
+      text:'Not like this...',
+      img:'/img/sad2.webp'
+    },
+    {
+      text:'So this is it then?',
+      img:'/img/pikachu.webp'
+    },
+    {
+      text:'Wow, that hurts...',
+      img:'/img/sad1.gif'
+    },
+    {
+      text:'I wasn’t enough, huh?',
+      img:'/img/sad1.webp'
+    },
+  ]
+
   no.addEventListener('click', () => {
     var currentPadding = parseInt(window.getComputedStyle(yes).padding);
     var newPadding = currentPadding + 6
@@ -23,7 +44,8 @@
     var newFontSize = currentFontSize + 4
     yes.style.fontSize = newFontSize + 'px'
 
-    no.textContent = noAns[count % noAns.length]
+    catImg.src = arr[count % arr.length].img
+    no.textContent = arr[count % arr.length].text
     count++
   })
 

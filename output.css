@@ -527,6 +527,9 @@
   .relative {
     position: relative;
   }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
   .me-2 {
     margin-inline-end: calc(var(--spacing) * 2);
   }
@@ -538,6 +541,9 @@
   }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .inline-flex {
     display: inline-flex;
@@ -608,6 +614,9 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -674,6 +683,9 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .\[text\:\'Please\?\'\] {
+    text: 'Please?';
   }
   .hover\:bg-green-800 {
     &:hover {
