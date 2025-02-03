@@ -2,6 +2,8 @@
   var no = document.querySelector('#no')
   var yes = document.querySelector('#yes')
   var catImg = document.querySelector('#capooImg')
+  var titleV = document.querySelector('#titleV')
+
   let count=0
 
   var arr = [
@@ -47,5 +49,46 @@
     catImg.src = arr[count % arr.length].img
     no.textContent = arr[count % arr.length].text
     count++
+    if(count >= 10){
+      no.classList.add('absolute')
+      const randomX = Math.floor(Math.random() * 15);
+      const randomY = Math.floor(Math.random() * 50);
+      no.style.right = randomX + 'rem'
+      no.style.top = randomY + 'rem'
+    }
   })
 
+  yes.addEventListener('click', () => {
+    catImg.src = 'img/cat.gif'
+    // titleV.classList.add('hidden')
+    titleV.textContent = 'yipee'
+    yes.classList.add('hidden')
+    no.classList.add('hidden')
+    const defaults = {
+      spread: 360,
+      ticks: 100,
+      gravity: 0,
+      decay: 0.94,
+      startVelocity: 30,
+      shapes: ["heart"],
+      colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+    };
+    
+    confetti({
+      ...defaults,
+      particleCount: 50,
+      scalar: 2,
+    });
+    
+    confetti({
+      ...defaults,
+      particleCount: 25,
+      scalar: 3,
+    });
+    
+    confetti({
+      ...defaults,
+      particleCount: 10,
+      scalar: 4,
+    });
+  })
